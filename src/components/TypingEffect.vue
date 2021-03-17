@@ -13,6 +13,7 @@ export default {
             text: "Hi! I am Antoine Pereira"
         }
     },
+    
 }
 </script>
 
