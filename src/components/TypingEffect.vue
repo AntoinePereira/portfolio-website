@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ text }}</h1>
+    <h1 v-if="lang === english">{{ text }}</h1>
     
   </div>
 </template>
@@ -8,6 +8,7 @@
 <script>
 export default {
   name: 'TypingEffect',
+  props: ['lang'],
   data() {
         return {
             text: "Hi! I am Antoine Pereira"

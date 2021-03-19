@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <TypingEffect/>
+    <TypingEffect v-if="lang === english"/>
   </div>
 </template>
 
@@ -10,6 +10,7 @@
 import TypingEffect from '../components/TypingEffect.vue'
 export default {
   name: 'Home',
+  props: ['lang'],
   components: {
     TypingEffect
   }

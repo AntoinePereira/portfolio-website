@@ -4,7 +4,7 @@
       <router-link to="/">Home </router-link>
       <router-link to="/Projects">Projects</router-link>
     </div>
-    <Preferences :mode="mode" @toggle="toggle" />
+    <Preferences id='preferences' :mode="mode" @toggle="toggle" :lang="lang" @toggleLang="toggleLang" />
     <router-view/>
   </div>
 </template>
@@ -16,7 +16,8 @@ export default {
   name: 'app',
   data () {
     return {
-      mode: 'light'
+      mode: 'light',
+      lang: 'english'
     }
   },
   components: {
@@ -28,6 +29,13 @@ export default {
         this.mode = "light"
       } else {
         this.mode = "dark"
+      }
+    },
+    toggleLang () {
+      if (this.lang === "french") {
+        this.lang = "english"
+      } else {
+        this.lang = "french"
       }
     }
   }
@@ -57,16 +65,31 @@ export default {
   #nav{
     border-bottom: solid white 2px;
   }
+  #preferences{
+    border-bottom: solid white 2px;
+  }
 }
 .light{
   background: #F3F3F3;
   color: #15202B;
   transition: background 0.3s ease-in-out;
+  #nav{
+    border-bottom: solid black 2px;
+  }
+  #preferences{
+    border-bottom: solid black 2px;
+  }
 }
+
+
+
+
+
+
 
 #nav {
   padding: 30px;
-  border-bottom: solid black 2px;
+  
 
   a {
     font-weight: bold;
