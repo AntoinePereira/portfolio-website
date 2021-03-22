@@ -16,8 +16,8 @@ export default {
   name: 'app',
   data () {
     return {
-      mode: 'light',
-      lang: 'english'
+      mode: localStorage.getItem('mode') || 'light',
+      lang: localStorage.getItem('lang') || 'english'
     }
   },
   components: {
@@ -30,6 +30,7 @@ export default {
       } else {
         this.mode = "dark"
       }
+      localStorage.setItem('mode', this.mode)
     },
     toggleLang () {
       if (this.lang === "french") {
@@ -37,6 +38,7 @@ export default {
       } else {
         this.lang = "french"
       }
+      localStorage.setItem('lang', this.lang)
     }
   }
 }

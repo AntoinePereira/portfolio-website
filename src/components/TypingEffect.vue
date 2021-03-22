@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1 v-if="lang === english">{{ text }}</h1>
+    <h1 v-if="props.lang === 'english'">{{ text }}</h1>
     
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
   props: ['lang'],
   data() {
         return {
-            text: "Hi! I am Antoine Pereira"
+          text: "Hi! I am Antoine Pereira"
         }
     },
     
