@@ -21,8 +21,8 @@ export default {
 .toggle {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 43px;
+  height: 24px;
 }
 .toggle input {
   opacity: 0;
@@ -43,8 +43,8 @@ export default {
 .toggler:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 16px;
+  width: 16px;
   left: 4px;
   bottom: 4px;
   background: #FFF;
@@ -58,9 +58,9 @@ input:focus + toggler {
   box-shadow: 0 0 2px #2196F3;
 }
 input:checked + .toggler:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
 }
 .toggler.round {
   border-radius: 34px;

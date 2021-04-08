@@ -1,8 +1,12 @@
 <template>
   <div id="app" :class="mode">
     <div id="nav">
-      <router-link to="/">Home </router-link>
-      <router-link to="/Projects">Projects</router-link>
+      <div class="leftBtn">
+        <router-link :to="`/${$i18n.locale}`">Home </router-link>
+      </div>
+      <div class="rightBtn">
+        <router-link :to="`/${$i18n.locale}/projects`">Projects</router-link>
+      </div>
     </div>
     <Preferences id='preferences' :mode="mode" @toggle="toggle" :lang="lang" @toggleLang="toggleLang" />
     <router-view/>
@@ -16,7 +20,7 @@ export default {
   name: 'app',
   data () {
     return {
-      mode: localStorage.getItem('mode') || 'light',
+      mode: localStorage.getItem('mode') || 'dark',
       lang: localStorage.getItem('lang') || 'english'
     }
   },
@@ -35,10 +39,18 @@ export default {
     toggleLang () {
       if (this.lang === "french") {
         this.lang = "english"
+        this.setLocale('en')
       } else {
         this.lang = "french"
+        this.setLocale('fr')
       }
       localStorage.setItem('lang', this.lang)
+    },
+    setLocale(locale) {
+      this.$i18n.locale = locale
+      this.$router.push({
+        params: { lang: locale }
+      })
     }
   }
 }
@@ -61,44 +73,56 @@ export default {
 }
 
 .dark {
-  background: #192734;
+  background: #022c43;
   color: #E8E8E8;
   transition: background 0.3s ease-in-out;
   #nav{
-    border-bottom: solid white 2px;
+    border-bottom: solid #ffd700 1px;
+    a{
+      color: #ffd700;
+    }
   }
   #preferences{
-    border-bottom: solid white 2px;
+    background-color: #115173;
+    border-bottom: solid #ffd700 1px;
   }
 }
 .light{
   background: #F3F3F3;
-  color: #15202B;
+  color: #022c43;
   transition: background 0.3s ease-in-out;
   #nav{
-    border-bottom: solid black 2px;
+    border-bottom: solid #022c43 2px;
+    a{
+      color: #022c43;
+    }
   }
   #preferences{
-    border-bottom: solid black 2px;
+    border-bottom: solid #022c43 2px;
   }
 }
 
-
-
-
-
-
-
 #nav {
-  padding: 30px;
-  
-
+  display: flex;
+  justify-content: space-around;
+  .leftBtn{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    width: 50vw;
+    background-image: linear-gradient(to bottom right, #022c43, #053f5e, #115173);
+  }
+  .rightBtn{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    width: 50vw;
+    background-image: linear-gradient(to bottom right, #022c43, #053f5e, #115173);
+  }
   a {
     font-weight: bold;
-    color: #2c3e50;
-
     &.router-link-exact-active {
-      color: #42b983;
+      text-decoration:underline;
     }
   }
 }

@@ -1,0 +1,14 @@
+{
+    "message": "bonjour i18n !!",
+    "home": {
+        "typingFirst": "Bonjour! Je suis Antoine Pereira,",
+        "typingSecond": "votre futur développeur web!",
+        "aboutMe": {
+            "title": "À PROPOS",
+            "text": "Récemment diplômé d'un titre RNCP niveau 5 (bac+2) de développeur web obtenu auprès de l'organisme de formation OpenClassrooms, j'aspire a trouver mon premier emploi en tant que développeur web. Mon parcours, à l’issue de ma formation initiale (bac pro maintenance industrielle)  m’a permit d’obtenir des compétences dans des domaines divers et variés . J’ai successivement été  électromécanicien industriel, électricien et j’ai exercé divers métiers du bâtiment en France et en Australie. Au cours de ces expériences, j’ai été confronté a des situations très différentes qui m’ont permit de développer ma capacité d’adaptation, le travail en équipe comme en autonomie, l’acquisition permanente de nouvelles compétences. Je souhaite aujourd’hui m’engager dans le domaine qui m’a toujours passionné, le développement web."
+        }
+    },
+    "projects": {
+        "test": "test-pro francais"
+    }
+}

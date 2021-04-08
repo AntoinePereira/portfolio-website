@@ -1,37 +1,55 @@
 <template>
-  <div class="hello">
-    <h1 v-if="props.lang === 'english'">{{ text }}</h1>
-    
-  </div>
+    <div class="typing-wrapper" >
+        <p id=prem>{{ $t('home.typingFirst') }}</p>
+        <p id=deux>{{ $t('home.typingSecond') }}<span>|</span></p>
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'TypingEffect',
-  props: ['lang'],
-  data() {
-        return {
-          text: "Hi! I am Antoine Pereira"
-        }
-    },
-    
-}
+
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
+<style scoped>
+
+#prem{
+  /*border: solid red 2px;*/
+  font-family: "Courier";
+  font-size: 18px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 20em;
+  animation: type 2s steps(25, end) ; 
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+#deux{
+  /*border: solid red 2px;*/
+  font-family: "Courier";
+  font-size: 18px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 20em;
+  animation: type2 4s steps(27, start) ; 
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+span{
+  animation: blink 1s infinite;
 }
-a {
-  color: #42b983;
+
+@keyframes type{ 
+  0%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
 }
+
 </style>
