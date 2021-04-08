@@ -54,6 +54,7 @@ export default {
   width: 300px;
   align-self: center;
   justify-self: center;
+  background-image: linear-gradient(to bottom right, lightgray, #053f5e, lightgray);
 }
 .about{
   display: flex;
