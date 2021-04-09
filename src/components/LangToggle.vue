@@ -3,7 +3,7 @@
     <label class="toggle">
       <input 
         type="checkbox" 
-        :checked="(lang === 'french') ? 'checked' : false" 
+        :checked="(lang === 'english') ? 'checked' : false" 
         @change="$emit('toggleLang')"
       />
       <span class="toggler round"></span>
