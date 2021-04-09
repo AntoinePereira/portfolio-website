@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <!--<h1>This is an about page</h1>
     <p>{{ $t('projects.test') }}</p>
     <div class="projectThumbnail">
 			<div class="apercuResto">	
@@ -10,8 +10,10 @@
 						<span><strong>The Full Palette</strong><br>New York</span>
 						
 					</div>
-				</div>
+				</div>-->
+				<h1>WORK IN PROGRESS</h1>
   </div>
+  
 </template>
 
 <style lang="scss" scoped>
