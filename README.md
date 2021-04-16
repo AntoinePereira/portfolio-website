@@ -1,4 +1,5 @@
 # portfolio-website
+Développement en cours de mon portfolio avec Vue.js
 
 ## Project setup
 ```
