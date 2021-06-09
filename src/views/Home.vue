@@ -2,7 +2,7 @@
   <div class="home">
     <TypingEffect class="typingEffect" :class="mode"/>
     <div class="tablette">
-    <img class='wam' alt="Vue logo" src="../assets/croptest2.png"/>
+    <img class='wam' alt="Vue logo" src="../assets/photowidth300px.png"/>
     <div class="about">
       <h1>{{ $t('home.aboutMe.title') }}</h1>
       <p>{{ $t('home.aboutMe.text') }}</p>
