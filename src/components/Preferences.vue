@@ -3,9 +3,9 @@
     <!--<h1>{{ mode }} Mode</h1>
     <Toggle :mode="mode" @toggle="$emit('toggle')" />
     <h1> {{lang}}</h1>-->
-    <img src="@/assets/united-kingdom.svg">
-    <LangToggle :lang="lang" @toggleLang="$emit('toggleLang')"/>
     <img src="@/assets/france.svg">
+    <LangToggle :lang="lang" @toggleLang="$emit('toggleLang')"/>
+    <img src="@/assets/united-kingdom.svg">
   </div>
 </template>
 
